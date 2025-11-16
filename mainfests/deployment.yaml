@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-sample
+  name: ui-sample
+  labels:
+    app: ui-sample
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx-sample
+      app: ui-sample
   template:
     metadata:
       labels:
-        app: nginx-sample
+        app: ui-sample
     spec:
       containers:
-      - name: nginx
-        image: nginx:latest
+      - name: ui-sample
+        image: ghcr.io/kool-dev/ui-sample:latest  # lightweight sample UI container
         ports:
         - containerPort: 80
