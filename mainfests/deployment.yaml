@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: ui-sample
-        image: ghcr.io/kool-dev/ui-sample:latest  # lightweight sample UI container
+        image: nginxinc/nginx-unprivileged:latest  # lightweight sample UI container
         ports:
         - containerPort: 80
